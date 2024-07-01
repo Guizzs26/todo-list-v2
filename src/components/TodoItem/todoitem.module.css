@@ -1,0 +1,91 @@
+.taskItem {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+
+  margin-bottom: 1.2rem;
+  padding: 1.6rem;
+  border: 1px solid #333333;
+  border-radius: 8px;
+
+  background-color: #262626;
+}
+
+.checkboxCheckboxText {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1.2rem;
+}
+
+.taskDescription {
+  font-size: 1.6rem;
+  line-height: 19.6px;
+  flex-grow: 1;
+  word-break: break-word;
+
+  color: #f2f2f2;
+}
+
+.taskDescription.completed {
+  text-decoration: line-through;
+
+  color: #808080;
+}
+
+.deleteBtn {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+  color: #808080;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/*  */
+
+input[type="checkbox"] {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  flex-shrink: 0;
+
+  position: relative;
+  transition: all 0.3s ease;
+
+  appearance: none;
+  border: 2px solid #4ea8de;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  border: 2px solid #5e60ce;
+  background-color: #5e60ce;
+}
+
+input[type="checkbox"]:checked::after {
+  width: 3px;
+  height: 8px;
+
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -60%) rotate(50deg);
+
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}

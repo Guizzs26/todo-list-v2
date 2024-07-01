@@ -8,11 +8,25 @@ function TodoApp() {
 
   const handleAddTask = (newTask) => setTasks((tasks) => [...tasks, newTask]);
 
+  const handleDeleteTask = (id) =>
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+
+  const handleToggleTask = (id) =>
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+      )
+    );
+
   return (
     <>
       <Header />
       <TodoAddForm onAddTask={handleAddTask} />
-      <TodoList />
+      <TodoList
+        tasks={tasks}
+        onDeleteTask={handleDeleteTask}
+        onToggleTask={handleToggleTask}
+      />
     </>
   );
 }
