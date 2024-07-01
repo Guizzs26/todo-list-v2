@@ -1,5 +1,5 @@
-import logo from "../../assets/todoLogo.svg";
 import styles from "./header.module.css";
+import logo from "../../assets/todoLogo.svg";
 
 function Header() {
   return (

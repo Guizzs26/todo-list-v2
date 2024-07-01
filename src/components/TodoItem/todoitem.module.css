@@ -1,3 +1,5 @@
+/* Task item layout */
+
 .taskItem {
   width: 100%;
 
@@ -14,12 +16,16 @@
   background-color: #262626;
 }
 
+/* Checkbox and description box layout */
+
 .checkboxCheckboxText {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 1.2rem;
 }
+
+/* task description styles */
 
 .taskDescription {
   font-size: 1.6rem;
@@ -36,6 +42,8 @@
   color: #808080;
 }
 
+/* Delete btn and icon styles*/
+
 .deleteBtn {
   border: none;
   background: none;
@@ -49,7 +57,7 @@
   height: 2.4rem;
 }
 
-/*  */
+/* Checkbox styles */
 
 input[type="checkbox"] {
   width: 2.4rem;
@@ -86,6 +94,6 @@ input[type="checkbox"]:checked::after {
 
   transform: translate(-50%, -60%) rotate(50deg);
 
-  border: solid white;
+  border: solid #fff;
   border-width: 0 2px 2px 0;
 }

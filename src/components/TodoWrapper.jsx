@@ -2,7 +2,7 @@ import TodoApp from "./TodoApp";
 
 function TodoWrapper() {
   return (
-    <div className="container">
+    <div>
       <TodoApp />
     </div>
   );

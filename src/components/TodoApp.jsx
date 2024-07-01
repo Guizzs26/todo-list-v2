@@ -23,13 +23,15 @@ function TodoApp() {
   return (
     <>
       <Header />
-      <TodoAddForm onAddTask={handleAddTask} />
-      <Stats tasks={tasks} />
-      <TodoList
-        tasks={tasks}
-        onDeleteTask={handleDeleteTask}
-        onToggleTask={handleToggleTask}
-      />
+      <div className="container">
+        <TodoAddForm onAddTask={handleAddTask} />
+        <Stats tasks={tasks} />
+        <TodoList
+          tasks={tasks}
+          onDeleteTask={handleDeleteTask}
+          onToggleTask={handleToggleTask}
+        />
+      </div>
     </>
   );
 }
