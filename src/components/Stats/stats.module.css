@@ -1,0 +1,68 @@
+/* Stats container layout */
+
+.stats {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2.4rem;
+}
+
+/* Boxes layout */
+
+.totalTasksBox,
+.completedTasksBox {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Label styles */
+
+.totalTasksLabel,
+.completedTasksLabel {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.totalTasksLabel {
+  color: #4ea8de;
+}
+
+.completedTasksLabel {
+  color: #8284fa;
+}
+
+/* Count styles */
+
+.totalTasksCount,
+.completedTasksCount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.2rem 0.8rem;
+  border-radius: 50%;
+
+  color: #d9d9d9;
+  background-color: #333;
+}
+
+.totalTasksCount {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/*  */
+
+.completedTasksCount {
+  width: 5.2rem;
+  height: 2rem;
+}

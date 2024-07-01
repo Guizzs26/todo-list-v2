@@ -1,6 +1,8 @@
 import { useState } from "react";
+
 import Header from "./Header/Header";
 import TodoAddForm from "./TodoAddForm/TodoAddForm";
+import Stats from "./Stats/Stats";
 import TodoList from "./TodoList/TodoList";
 
 function TodoApp() {
@@ -22,6 +24,7 @@ function TodoApp() {
     <>
       <Header />
       <TodoAddForm onAddTask={handleAddTask} />
+      <Stats tasks={tasks} />
       <TodoList
         tasks={tasks}
         onDeleteTask={handleDeleteTask}
