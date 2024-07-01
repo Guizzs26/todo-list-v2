@@ -1,13 +1,9 @@
-import Header from "./Header/Header";
-import TodoForm from "./TodoForm/TodoForm";
-import TodoList from "./TodoList/TodoList";
+import TodoApp from "./TodoApp";
 
 function TodoWrapper() {
   return (
     <div className="container">
-      <Header />
-      <TodoForm />
-      <TodoList />
+      <TodoApp />
     </div>
   );
 }
