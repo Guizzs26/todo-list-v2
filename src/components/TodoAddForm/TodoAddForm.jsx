@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import styles from "./todoaddform.module.css";
 
 import { useState } from "react";
 
-function TodoAddForm() {
+function TodoAddForm({ onAddTask }) {
   const [taskDescription, setTaskDescription] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -11,7 +12,8 @@ function TodoAddForm() {
     if (!taskDescription.trim()) return;
 
     const newTask = { id: Date.now(), taskDescription, isCompleted: false };
-    console.log(newTask);
+
+    onAddTask(newTask);
 
     setTaskDescription("");
   };
