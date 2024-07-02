@@ -6,19 +6,34 @@ import Stats from "./Stats/Stats";
 import TodoList from "./TodoList/TodoList";
 
 function TodoApp() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const savedItems = localStorage.getItem("tasks");
 
-  const handleAddTask = (newTask) => setTasks((tasks) => [...tasks, newTask]);
+    return savedItems ? JSON.parse(savedItems) : [];
+  });
 
-  const handleDeleteTask = (id) =>
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  const updateTasks = (newTasks) => {
+    setTasks(newTasks);
 
-  const handleToggleTask = (id) =>
-    setTasks((tasks) =>
-      tasks.map((task) =>
-        task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
-      )
+    localStorage.setItem("tasks", JSON.stringify(newTasks));
+  };
+
+  const handleAddTask = (newTask) => {
+    const addedTask = [...tasks, newTask];
+    updateTasks(addedTask);
+  };
+
+  const handleDeleteTask = (id) => {
+    const deletedTask = tasks.filter((task) => task.id !== id);
+    updateTasks(deletedTask);
+  };
+
+  const handleToggleTask = (id) => {
+    const toggledTask = tasks.map((task) =>
+      task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
     );
+    updateTasks(toggledTask);
+  };
 
   return (
     <>
